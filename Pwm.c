@@ -5,7 +5,6 @@
 #include "hardware/timer.h"
 
 #define SERVO_PIN 22 
-#define PWM_FREQ 50
 #define CLOCK_DIV 64
 #define WRAP_VALUE 39062
 
@@ -53,8 +52,6 @@ void setup_pwm() {
 int main() {
     stdio_init_all();
     setup_pwm();
-    // gpio_init(LED_PIN);
-    // gpio_set_dir(LED_PIN, GPIO_OUT);
 
     // Posição 180 graus (2400µs)
     set_servo_position(2400);
@@ -67,10 +64,6 @@ int main() {
     // Posição 0 graus (500µs)
     set_servo_position(500);
     sleep_ms(5000);
-
-    // Configura timer para interrupção a cada 10ms
-    // repeating_timer_t timer;
-    // add_repeating_timer_ms(10, timer_callback, NULL, &timer);
 
     while (true) 
     {
