@@ -4,7 +4,7 @@
 #include "hardware/irq.h"
 #include "hardware/timer.h"
 
-#define SERVO_PIN 22
+#define SERVO_PIN 22 
 #define PWM_FREQ 50
 #define CLOCK_DIV 64
 #define WRAP_VALUE 39062
